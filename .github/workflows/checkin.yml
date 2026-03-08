@@ -1,7 +1,9 @@
 name: AnyRouter 自动签到
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    # 这里的 13 代表分钟，23 代表 UTC 的小时
+    # 对应 UTC+8 的时间就是每天早上的 7:13
+    - cron: '13 23 * * *'
   workflow_dispatch:
 
 jobs:
